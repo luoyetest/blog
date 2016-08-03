@@ -1,0 +1,10 @@
+<div class="whisper">
+    <% whispers.forEach(function (whisper) {%>
+        <ul class="say_box">
+            <div class="sy">
+                <p> <%= whisper.text %> </p>
+            </div>
+            <span class="dateview"><%= whisper.date %></span>
+        </ul>
+    <% })%>
+</div>

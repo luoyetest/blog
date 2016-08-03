@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>落夜 blog</title>
+    <meta name="keywords" content="落夜" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/index.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script type="text/javascript" src="/js/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+
+    <script src="../web/js/html5.js"></script>
+
+</head>
+
+<body>
+<!--header start-->
+<div id="header">
+    <h1>落夜</h1>
+    <p>一句话，一个人，一座城……</p>
+</div>
+<!--header end-->
+<!--nav-->
+<div id="nav">
+    <ul>
+        <li><a href="/">首页</a></li>
+    <!--    <li><a href="/daily">日记</a></li>
+        <li><a href="/photo">相册</a></li>  -->
+        <li><a href="/tech">技术</a></li>
+        <li><a href="/whisper">碎言</a></li>
+    <!--    <li><a href="/message">留言</a></li>  -->
+        <div class="clear"></div>
+    </ul>
+</div>
+<!--nav end-->
+
+<div id="content">
+
+    <%- body %>
+
+</div>
+
+
+<div id="footer">
+    <p>落夜 2016年8月</p>
+</div>
+
+<script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+<script type="text/javascript" src="/js/nav.js"></script>
+
+</body>
+</html>

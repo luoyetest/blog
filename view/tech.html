@@ -1,0 +1,12 @@
+<div class="tech">
+    <% techs.forEach(function (tech) {%>
+        <div class="list">
+            <h3><a href="/readtech/<%= tech.id %>"><%= tech.title %></a></h3>
+            <p class="describe"><%= tech.describe %></p>
+            <p class="const">
+            	<span class="author">作者:<%= tech.author %></span>
+                <span class="time">时间:<%= tech.date %></span>
+			</p>
+        </div>
+    <% })%>
+</div>

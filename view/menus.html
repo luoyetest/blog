@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>落夜 blog</title>
+       <meta name="keywords" content="落夜" />
+       <meta name="description" content="落夜 blog" />
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	var P,T;
+	var over = -1;
+	var fontSize = 30;
+	var lensFX = 1;
+	var color = "#666";
+	var selected = "#FFF";
+	function zoom(s){
+		if(s!=over){
+			over = s;
+			for(var i=0;i<T;i++){
+				P[i].style.fontSize=Math.floor(fontSize / (Math.abs(i - s) + 			lensFX) + 8)+"px";
+				P[i].style.color=(i==s)?selected:color;
+			}
+		}
+	}
+	onload = function(){
+		P = document.getElementById("left").getElementsByTagName("a");
+		T = P.length;
+		for (var i=0;i<T;i++){
+			P[i].style.width = "100%";
+			P[i].onmouseover=new Function("zoom("+i+");");
+		}
+		zoom(0);
+	}
+	</script>
+    <style type="text/css">
+<!--
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+-->
+</style>
+</head>
+<body>
+
+  <div id="left">
+	<a href="/">博客首页</a>
+	<a href="/tech">文章分享</a>
+	<a href="/whisper">随感碎言</a>
+    <a href="/admin">管理登录</a>
+  </div>
+  <div id="main">
+    
+    <%- body %>
+    
+  </div>
+  <div id="right">
+  	<div class="floatbox">
+    	<img style="position:absolute;left:0px;top:0px;width:100%;height:100%;z-Index:-1;" src="/images/my.jpg" />
+    	<h2>关于博主</h2>
+        <div class="about">
+        	<p>落夜</p>
+        	<p>无业游民</p>
+        	<p>zhouxingzhi@live.com</p>
+        <br />
+    </div>
+  </div>
+</div>
+</body>
+</html>
